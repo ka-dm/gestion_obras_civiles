@@ -8,4 +8,4 @@ def login_view(request):
     return render(request, 'accounts/login.html', {})
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'button.html', {})
