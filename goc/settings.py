@@ -54,7 +54,7 @@ ROOT_URLCONF = 'goc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['app/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,12 +73,35 @@ WSGI_APPLICATION = 'goc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'det1ihjuafpg24',
+        'USER': 'lqqgiznmvrbhiq',
+        'PASSWORD': '83cda8def5ca6eb8ab64c6fbbba84eed966b66be64848e48811b74e812315fbc',
+        'HOST': 'ec2-18-211-194-36.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
+"""
+postgres://{user}:{password}@{hostname}:{port}/{database-name}
+
+user = lqqgiznmvrbhiq
+password =83cda8def5ca6eb8ab64c6fbbba84eed966b66be64848e48811b74e812315fbc
+hostname = ec2-18-211-194-36.compute-1.amazonaws.com
+port = 5432
+database-name = det1ihjuafpg24
+"""
 
 
 # Password validation
