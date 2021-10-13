@@ -19,6 +19,6 @@ from app.views import login_view, index
 
 urlpatterns = [
     path('', index, name='index'),  
-    path('accounts/', include('app.urls')),
+    path('app/', include('app.urls')),
     path('admin/', admin.site.urls),
 ]

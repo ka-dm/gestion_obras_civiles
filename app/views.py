@@ -6,5 +6,9 @@ def login_view(request):
 def register_view(request):
     return render(request, 'accounts/register.html')
 
+def dashboard_view(request):
+    return render(request, 'dashboard/dashboard.html')
+
 def index(request):
-    return render(request, 'button.html', {})
+    return render(request, 'index.html', {})
+
