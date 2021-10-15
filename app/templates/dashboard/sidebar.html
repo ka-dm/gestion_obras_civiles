@@ -21,37 +21,31 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="inicio">
                                 <i class="bi bi-house"></i>
                                 Inicio
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="inventario">
                                 <i class="bi bi-box-seam"></i>
                                 Inventario
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="reportes">
                                 <i class="bi bi-file-earmark-bar-graph"></i>
                                 Reportes
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-pie-chart"></i>
-                                Graficos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="gestion-usuarios">
                                 <i class="bi bi-gear"></i>
-                                Confiuracion
+                                Gestion de usuarios
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="perfil">
                                 <i class="bi bi-person"></i>
                                 Perfil
                             </a>
@@ -61,40 +55,22 @@
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-
-                <h2>Inicio</h2>
-                <div class="card">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                {% if sidebar_name == 'inicio' %}
+                    {% include "dashboard/inicio.html" %}
+                {% endif %}
+                {% if sidebar_name == 'inventario' %}
+                    {% include "dashboard/inventario.html" %}
+                {% endif %}
+                {% if sidebar_name == 'reportes' %}
+                    {% include "dashboard/reportes.html" %}
+                {% endif %}
+                {% if sidebar_name == 'gestion-usuarios' %}
+                    {% include "dashboard/gestion-usuarios.html" %}
+                {% endif %}
+                {% if sidebar_name == 'perfil' %}
+                    {% include "dashboard/perfil.html" %}
+                {% endif %}
             </main>
-           
         </div>
     </div>
 

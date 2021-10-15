@@ -6,8 +6,8 @@ def login_view(request):
 def register_view(request):
     return render(request, 'accounts/register.html')
 
-def dashboard_view(request):
-    return render(request, 'dashboard/dashboard-base.html')
+def dashboard_view(request, sidebar_name):
+    return render(request, 'dashboard/dashboard-base.html', {"sidebar_name":sidebar_name})
 
 def index(request):
     return render(request, 'index.html', {})
